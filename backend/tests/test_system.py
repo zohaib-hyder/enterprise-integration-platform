@@ -12,7 +12,9 @@ from app.main import create_app
 
 @pytest.fixture
 def client():
-    with TestClient(create_app(Settings(_env_file=None, app_env="test"))) as client:
+    with TestClient(
+        create_app(Settings(_env_file=None, app_env="test", database_url=None))
+    ) as client:
         yield client
 
 
@@ -61,7 +63,10 @@ def test_unsafe_cors_rejected(origin):
         Settings(_env_file=None, cors_origins=[origin])
 
 
-def test_secure_defaults_and_secret_repr():
+def test_secure_defaults_and_secret_repr(monkeypatch):
+    # Defaults must be tested without inherited deployment/CI configuration.
+    for field in Settings.model_fields:
+        monkeypatch.delenv(field.upper(), raising=False)
     config = Settings(_env_file=None)
     assert config.cors_origins == []
     assert config.database_url is None

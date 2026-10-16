@@ -1,5 +1,6 @@
 """Workflow security and real PostgreSQL dispatch/worker/checkpoint recovery."""
 
+import base64
 import copy
 import secrets
 import uuid
@@ -625,9 +626,13 @@ def test_multiple_workflows_and_rescan_are_explicit(workflow_engine):
         assert worker.dispatch(db, rescan=True) == 0
 
 
-def test_seed_engine_runs_real_success_retry_and_terminal_scenarios(workflow_engine):
+def test_seed_engine_runs_real_success_retry_and_terminal_scenarios(workflow_engine, monkeypatch):
     from app.seed_workflows import run_demo
 
+    # A fresh checkout has no operator key; use one ephemeral key for both runs.
+    monkeypatch.setenv(
+        "WEBHOOK_ENCRYPTION_KEY", base64.urlsafe_b64encode(secrets.token_bytes(32)).decode()
+    )
     result = run_demo(workflow_engine, "workflow-admin@example.test")
     assert result["workflow_states"] == {"DEAD_LETTERED": 2, "SUCCEEDED": 4}
     assert result == run_demo(workflow_engine, "workflow-admin@example.test")
