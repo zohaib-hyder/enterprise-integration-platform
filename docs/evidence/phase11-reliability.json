@@ -1,0 +1,16 @@
+[
+  {
+    "scenario": "verify_phase6_http.py",
+    "returncode": 0,
+    "output": "backend/.local/phase11-verify_phase6_http.py.log"
+  },
+  {
+    "scenario": "verify_phase8_http.py",
+    "returncode": 0,
+    "output": "backend/.local/phase11-verify_phase8_http.py.log"
+  },
+  {
+    "scenario": "owned_connection_interruption_pre_ping_reconnect",
+    "returncode": 0
+  }
+]

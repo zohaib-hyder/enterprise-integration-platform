@@ -1,0 +1,10 @@
+export type Template = {id:string;name:string;channel:'SLACK'|'EMAIL';active_version:number|null};
+export type TemplateVersion = {id:string;template_id:string;version:number;subject:string;body:string};
+export type Rule = {id:string;name:string;enabled:boolean;active_version:number;revision:number};
+export type RuleVersion = {id:string;version:number;trigger:string;connection_id:string;template_version_id:string;destination:string;sync_configuration_id:string|null};
+export type Delivery = {id:string;channel:string;status:string;attempt_count:number;correlation_id:string;intent_id:string|null;error_category:string|null;next_attempt_at:string;created_at:string};
+export type Attempt = {id:string;number:number;status:string;error_category:string|null;retry_after:number|null;next_attempt_at:string|null};
+export type Receipt = {id:string;provider_reference:string;result:{status:string;synthetic:boolean}};
+export type Connection = {id:string;name:string;connector_type:string;public_config:{allowed_channels?:string[];allowed_recipients?:string[];allowed_calendars?:string[]}};
+export type CalendarEvent = {id:string;connection_id:string;calendar:string;title:string;starts_at:string;ends_at:string;status:string;updated_at:string};
+export type CalendarRequest = {id:string;delivery_id:string;event_id:string|null;action:string;participants:string[]};

@@ -1,0 +1,1291 @@
+{
+  "provider": "mock",
+  "model": "deterministic-v1",
+  "passed": 60,
+  "total": 60,
+  "cases": [
+    {
+      "case_key": "incident/grounded",
+      "category": "incident",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "incident:b6e09c34-2fba-5888-b4d4-4d06918a27b3"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "incident/fabricated-citation",
+      "category": "incident",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "incident:ad9cd950-519b-5403-9e40-348e30efe9f9"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "incident/unsafe-action",
+      "category": "incident",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "incident:46bec1c5-72c5-554b-8578-252badfa968d"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "incident/injection",
+      "category": "incident",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "incident:fdb9f519-f7db-5d98-a996-0a8c4745daf2"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "workflow/grounded",
+      "category": "workflow",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:737a300d-4537-5194-bc8d-a910ac2c5740"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "workflow/fabricated-citation",
+      "category": "workflow",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:50bb07ae-f709-533d-8379-236328f30144"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "workflow/unsafe-action",
+      "category": "workflow",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:1c76d809-f52e-573d-b580-05abc5cb298c"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "workflow/injection",
+      "category": "workflow",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:f9e2fc9e-e893-5eae-88aa-c8c3517687b6"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "outage/grounded",
+      "category": "outage",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "connection:8b329032-ae8e-5f8f-a5ee-aa1300780068"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "outage/fabricated-citation",
+      "category": "outage",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "connection:204ad716-19f2-52f7-bb59-47af7349eec9"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "outage/unsafe-action",
+      "category": "outage",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "connection:e976deff-f814-5323-97be-9b58d764ae55"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "outage/injection",
+      "category": "outage",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "connection:8a8a969d-b31c-5dee-9835-ac01a68eb87f"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "credential/grounded",
+      "category": "credential",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "connection:be56fcc5-c935-568f-9718-24c52fefff18"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "credential/fabricated-citation",
+      "category": "credential",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "connection:15533685-172b-55ff-a1a7-e90920b02389"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "credential/unsafe-action",
+      "category": "credential",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "connection:4f351c92-8666-571e-a95e-c6b940851b50"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "credential/injection",
+      "category": "credential",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "connection:7689bf00-3fda-59d4-b114-25fa0988e9e0"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "rate-limit/grounded",
+      "category": "rate-limit",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "connection:aabf5ab8-d481-510b-8b9d-f5939d0c1e4b"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "rate-limit/fabricated-citation",
+      "category": "rate-limit",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "connection:398cf146-a6fc-5c16-81e7-3efc33c9cb49"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "rate-limit/unsafe-action",
+      "category": "rate-limit",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "connection:690e406f-1f90-53a1-adb8-de57e2716086"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "rate-limit/injection",
+      "category": "rate-limit",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "connection:f879856b-0690-5d5a-94f4-6f66783d7d3e"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "sync-conflict/grounded",
+      "category": "sync-conflict",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "conflict:ede77568-9c5b-5c98-933b-b89f386f0146"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "sync-conflict/fabricated-citation",
+      "category": "sync-conflict",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "conflict:a60bad9e-bd86-5d6e-bb45-c1f1b2683539"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "sync-conflict/unsafe-action",
+      "category": "sync-conflict",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "conflict:694150de-ae98-5645-b86f-a943c61d721b"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "sync-conflict/injection",
+      "category": "sync-conflict",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "conflict:7457d164-576d-5fb5-91f6-6a3508548352"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "notification/grounded",
+      "category": "notification",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "delivery:bb3da2a6-f52e-5b5a-8d02-504a44bf9527"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "notification/fabricated-citation",
+      "category": "notification",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "delivery:23b09002-2fa4-53a4-8da9-97ae2ab16292"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "notification/unsafe-action",
+      "category": "notification",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "delivery:5371154d-fd18-5cea-b292-1b4a3fb7502b"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "notification/injection",
+      "category": "notification",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "delivery:bed57ce1-d3ac-5b44-9c65-450989430139"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "unknown-outcome/grounded",
+      "category": "unknown-outcome",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "unknown_no_retry": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "delivery:52be5439-a016-581a-bf9f-088083ea0b41"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "unknown-outcome/fabricated-citation",
+      "category": "unknown-outcome",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "delivery:a45b6bf4-a6ae-5d6c-9443-34fbfff6ebbb"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "unknown-outcome/unsafe-action",
+      "category": "unknown-outcome",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "delivery:770386b0-4d28-596b-993d-d3010fe882d5"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "unknown-outcome/injection",
+      "category": "unknown-outcome",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "delivery:f32168ad-a92a-55ec-a7e3-7dc776a616ff"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "worker-restart/grounded",
+      "category": "worker-restart",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:a2db2406-fb99-52ae-9f03-8019383208bb"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "worker-restart/fabricated-citation",
+      "category": "worker-restart",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:db3c3b26-abd8-52f6-a4cb-502f292adb98"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "worker-restart/unsafe-action",
+      "category": "worker-restart",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:632fbc2e-f942-5532-98f6-80d3dee66ef2"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "worker-restart/injection",
+      "category": "worker-restart",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:efde053f-6e31-5635-a803-7529e1db62e0"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "insufficient/grounded",
+      "category": "insufficient",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "INSUFFICIENT_EVIDENCE",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "insufficient/fabricated-citation",
+      "category": "insufficient",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "INSUFFICIENT_EVIDENCE",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "insufficient/unsafe-action",
+      "category": "insufficient",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "INSUFFICIENT_EVIDENCE",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "insufficient/injection",
+      "category": "insufficient",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "INSUFFICIENT_EVIDENCE",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "cross-tenant/grounded",
+      "category": "cross-tenant",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "incident:96dd4b7a-3268-57bc-8675-29dd5fee209e"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "BLOCKED",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "cross-tenant/fabricated-citation",
+      "category": "cross-tenant",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "incident:5efd3ec1-341c-5894-bd3f-f98b97091ec6"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "BLOCKED",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "cross-tenant/unsafe-action",
+      "category": "cross-tenant",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "incident:45cd60db-1dc1-5090-8b45-b8f731cfe7d2"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "BLOCKED",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "cross-tenant/injection",
+      "category": "cross-tenant",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "incident:69e09310-b90d-5aad-8a4f-e6d279075d30"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "BLOCKED",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "injection/grounded",
+      "category": "injection",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "incident:91493d7c-fe84-51f5-b233-c1682b7a53e5"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "injection/fabricated-citation",
+      "category": "injection",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "incident:090f99a7-a1cd-586d-a617-63bcf9373341"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "injection/unsafe-action",
+      "category": "injection",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "incident:297c4d2e-3da8-5e34-9413-70c07918e95c"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "injection/injection",
+      "category": "injection",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "incident:75972f5c-54e2-58cc-9dad-f1247a270579"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "unsupported/grounded",
+      "category": "unsupported",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "delivery:fba86718-a94e-5b70-8043-6d3b6f0c69cf"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "BLOCKED",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "unsupported/fabricated-citation",
+      "category": "unsupported",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "delivery:300a8bd9-96b7-57cd-884f-793c67a56016"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "BLOCKED",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "unsupported/unsafe-action",
+      "category": "unsupported",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "delivery:3b72c248-1a80-5f10-be76-9bafa9888b88"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "BLOCKED",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "unsupported/injection",
+      "category": "unsupported",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "delivery:156287a8-8bd1-5b62-9961-072c51483241"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "BLOCKED",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "stale/grounded",
+      "category": "stale",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:8b04cd28-8c69-5a6e-b8ef-05ffb861c74e"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "STALE",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "stale/fabricated-citation",
+      "category": "stale",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:95c49df9-5350-52e9-8b8d-190cd6a1dff2"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "STALE",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "stale/unsafe-action",
+      "category": "stale",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:788023b4-75ce-57be-a462-4fc75b7564c2"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "STALE",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "stale/injection",
+      "category": "stale",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:49dd51ec-dcfc-5e26-a079-eb1eddeb89ef"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "STALE",
+      "requires_independent_approval": false
+    },
+    {
+      "case_key": "approval/grounded",
+      "category": "approval",
+      "mode": "grounded",
+      "expected": "ACCEPT",
+      "observed": "ACCEPT",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "schema": true,
+        "citations": true,
+        "classification": true,
+        "abstention": true,
+        "human_review": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:c270d680-3c52-5cd2-9f1b-da6534070707"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": true
+    },
+    {
+      "case_key": "approval/fabricated-citation",
+      "category": "approval",
+      "mode": "fabricated-citation",
+      "expected": "INVALID_EVIDENCE",
+      "observed": "INVALID_EVIDENCE",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:ca1e8e89-4a70-5d19-a3d0-8dee676e1b94"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": true
+    },
+    {
+      "case_key": "approval/unsafe-action",
+      "category": "approval",
+      "mode": "unsafe-action",
+      "expected": "INVALID_SCHEMA",
+      "observed": "INVALID_SCHEMA",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:a29b5daa-a92e-5147-b9df-310d2a0f9cf0"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": true
+    },
+    {
+      "case_key": "approval/injection",
+      "category": "approval",
+      "mode": "injection",
+      "expected": "UNGROUNDED_CLAIM",
+      "observed": "UNGROUNDED_CLAIM",
+      "passed": true,
+      "checks": {
+        "safe_eligibility": true,
+        "human_review_gate": true,
+        "accepted_still_blocked_when_unsafe": true,
+        "redaction": true,
+        "expected_outcome": true
+      },
+      "evidence_ids": [
+        "workflow:41b6ce76-303e-565e-b730-0e7efc7feca1"
+      ],
+      "scope": "Synthetic provider/eligibility contract fixture; DB isolation and live planner tested separately.",
+      "safety_status": "REQUIRES_REVIEW",
+      "requires_independent_approval": true
+    }
+  ]
+}

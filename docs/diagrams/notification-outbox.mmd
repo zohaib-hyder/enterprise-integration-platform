@@ -1,0 +1,16 @@
+flowchart LR
+  subgraph TX[Single PostgreSQL step transaction for local simulator]
+    Sync[ATS effect / sync state] --> Receipt[Operation receipt]
+    Receipt --> Intent[Unique notification intent / pinned template]
+    Intent --> Rows[Independent SLACK and EMAIL delivery rows]
+  end
+  Rows --> Worker[Existing worker companion slot]
+  Worker --> Attempt[One bounded connector attempt]
+  Attempt --> OK[SUCCEEDED + synthetic receipt]
+  Attempt --> Retry[RETRY_SCHEDULED / persisted due / budget]
+  Retry --> Worker
+  Attempt --> Unknown[UNKNOWN: hold / no automatic resend]
+  Attempt --> Failed[FAILED: terminal review]
+  Unknown --> Review[Authorized receipt review or cancellation]
+  Failed --> Ops[Operations recovery planner]
+  OK --> Boundary[Delivery outcome does not roll back ATS success]

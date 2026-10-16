@@ -1,0 +1,14 @@
+flowchart TD
+  Browser[Opaque HttpOnly session cookie] --> Session[Hashed server-side session / active tenant]
+  Session --> Membership[Active membership and route permission]
+  Membership --> Scope[Tenant-scoped service queries]
+  Scope --> FK[Composite tenant ownership foreign keys / uniqueness]
+  FK --> PG[(Shared PostgreSQL / logical isolation)]
+  Hook[Public webhook identifier + verified HMAC] --> Endpoint[Stored endpoint fixes tenant and connection]
+  Endpoint --> Scope
+  Worker[Worker claim] --> Stored[Stored tenant / configured principal rechecked]
+  Stored --> Scope
+  PG --> A[Tenant A records]
+  PG --> B[Tenant B records]
+  Scope --> Deny[Cross-tenant IDs denied / no evidence leakage]
+  PG --- Limit[No PostgreSQL row-level-security claim]

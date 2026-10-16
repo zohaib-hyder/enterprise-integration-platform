@@ -1,0 +1,15 @@
+flowchart TD
+  Inbox[Accepted durable inbox] --> Dispatch[Bounded dispatcher / unique dispatch receipt]
+  Dispatch --> Plans[Execution and steps pin immutable version]
+  Plans --> Lock[Tenant-first locks / SKIP LOCKED admission]
+  Lock --> Claim[Claim token / worker lease / fencing]
+  Claim --> Step[One bounded step]
+  Step --> Commit[Local effect + receipt + checkpoint transaction]
+  Commit --> Next{More work?}
+  Next -->|yes| Plans
+  Next -->|no| Done[Terminal outcome]
+  Claim --> Expiry[Expired lease: new fenced claim]
+  Expiry --> Receipt[Inspect existing receipt / attempt budget]
+  Receipt --> Plans
+  Receipt --> Hold[Unknown outcome held for review]
+  Commit --> Companion[One notification or calendar action slot]

@@ -1,0 +1,13 @@
+flowchart TD
+  Evidence[Persisted failures / alerts / consistency findings] --> Refresh[Explicit incident refresh]
+  Refresh --> Incident[Correlated incident and timeline]
+  Incident --> Preview[Read-only recovery preview / evidence revision]
+  Preview --> Request[Authorized request with reason and request key]
+  Request --> Risk{Independent approval required?}
+  Risk -->|yes| Approver[Different authorized reviewer]
+  Risk -->|no| Confirm[Explicit confirmation of exact target and action]
+  Approver --> Confirm
+  Confirm --> Recheck[Recheck tenant / role / revision / eligibility]
+  Recheck --> Existing[Existing retry / replay / receipt-review service]
+  Recheck --> Reject[Reject stale / forbidden / ineligible request]
+  Existing --> Audit[Durable recovery history / audit]

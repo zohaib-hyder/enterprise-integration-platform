@@ -1,0 +1,13 @@
+flowchart LR
+  User[Operator browser] --> Next[Next.js App Router]
+  Next --> BFF[Allowlisted same-origin BFF]
+  BFF --> API[FastAPI v1 / session / RBAC]
+  Sender[Synthetic signed sender] --> Hook[HMAC webhook ingress]
+  Hook --> API
+  API --> PG[(PostgreSQL: tenant data and queues)]
+  Worker[Existing Python worker] <--> PG
+  Worker --> Sim[CRM / ATS / Slack / Email / Calendar simulators]
+  Sim --> PG
+  API --> AI[Evidence builder and schema validators]
+  AI --> Mock[Deterministic mock provider by default]
+  AI -. disabled optional transport .-> External[OpenAI: unverified externally]

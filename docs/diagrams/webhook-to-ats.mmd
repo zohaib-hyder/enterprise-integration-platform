@@ -1,0 +1,18 @@
+sequenceDiagram
+  participant S as Synthetic CRM sender
+  participant A as FastAPI webhook
+  participant P as PostgreSQL
+  participant W as Existing worker
+  S->>A: Timestamped HMAC event
+  A->>A: Size / signature / replay-window validation
+  A->>P: Tenant endpoint + durable inbox uniqueness + receipt
+  A-->>S: 202 accepted (200 duplicate)
+  W->>P: Dispatch accepted event to pinned workflow version
+  W->>P: PLAN_CRM_ATS_SYNC / immutable mapping
+  W->>P: APPLY_CRM_ATS_SYNC / authority and revision checks
+  alt Destination independently changed
+    W->>P: Persist conflict / hold without overwrite
+  else Safe local synthetic upsert
+    W->>P: ATS effect + identity + sync receipt + outbox in one transaction
+  end
+  W->>P: RECORD_SYNC_OUTCOME / checkpoint

@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./e2e',fullyParallel:false,workers:1,retries:0,timeout:45000,expect:{timeout:10000},globalSetup:'./e2e/setup.ts',use:{baseURL:'http://127.0.0.1:3000',browserName:'chromium',channel:'chromium',storageState:'.local/phase11-state.json',trace:'retain-on-failure',screenshot:'only-on-failure',video:'off'},reporter:[['list'],['json',{outputFile:'.local/phase11-e2e.json'}],['html',{open:'never'}]]});

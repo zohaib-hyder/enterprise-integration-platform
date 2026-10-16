@@ -1,0 +1,8 @@
+{
+  "database": "phase12_restore_99831a4455e9",
+  "tables_verified": 82,
+  "counts_and_fingerprints_match": true,
+  "dump_sha256_match": true,
+  "retained": true,
+  "application_orm_read": "passed"
+}

@@ -1,0 +1,7 @@
+export type Evidence={key:string;source_type:string;source_id:string;timestamp:string|null;summary:string;link:string};
+export type Recommendation={id:string;request_id:string;action:string;eligibility:string;review_state:string;version:number;details:{reason:string;expected_outcome:string;risks:string[];evidence_ids:string[];human_review_required:true}};
+export type Claim={kind:string;text:string;evidence_ids:string[]};
+export type Analysis={id:string;analysis_type:string;target_kind:string;target_id:string;status:string;evidence_revision:string;provider:string;model:string;configuration_version:number;telemetry:{simulated:boolean;actual_provider:string;actual_model:string;provider_errors:string[];latency_ms:number;usage:Record<string,number>|null};output:null|{summary:string;observed_facts:Claim[];possible_causes:Claim[];missing_evidence:string[];limitations:string[];suggested_classification:string|null;suggested_runbook:string|null};evidence:Evidence[];recommendations:Recommendation[]};
+export type AIConfig={version:number;provider:'mock'|'openai';model:string;fallback_to_mock:boolean;classification_enabled:boolean;openai_available:boolean;configured_openai_model:string|null};
+export type Validation={status:string;blocked_reasons:string[];requires_independent_approval:boolean;preview_only:boolean;link:string|null};
+export type Evaluation={id:string;summary:{provider:string;total:number;passed:number;real_model_accuracy:null}};

@@ -1,0 +1,13 @@
+# Read-only CRM / ATS reconciliation
+
+Admin/engineer users explicitly POST `/api/v1/sync/configurations/{id}/reconcile` with a bounded offset and limit (default 25, maximum 100). This is a synchronous bounded database inspection, not a scheduled service. The route records a run, actor, pinned current configuration version, completion time, page bounds and actual findings. It does not normalize sources, create identities, dispatch workflows or update provider records.
+
+Source records, destination identity associations and unresolved conflicts are independently paginated by stable UUID ordering using the requested bounds. A run represents these pages, not a whole-tenant completeness guarantee or historical snapshot across multiple runs. Concurrent application mutations are serialized by the same tenant lock. Continue with subsequent offsets for larger datasets; concurrent insertions can affect offset paging and require another inspection.
+
+Findings include missing destinations, mapped destinations that no longer exist, divergent normalized CRM-authorized fields, multiple canonical destination associations, duplicate exact-match candidates, an unlinked exact-match candidate, orphaned destination identities without a source association, invalid mappings, authority requiring review and open synchronization conflicts. Summaries count actual persisted finding rows. A source may produce more than one finding. ATS-only status differences are not authorized divergence.
+
+GET `/api/v1/sync/reconciliation-runs` lists runs; GET `/{run_id}` inspects summary; GET `/{run_id}/findings` pages immutable evidence. Operations users can inspect these. POST `/api/v1/sync/findings/{id}/plan` is an explicit management action for source-associated findings. It reads current state and creates a preview, with no provider or canonical/identity write. Identity-only/conflict-only findings must use their review path and cannot silently trigger repair.
+
+The dashboard exposes scan offset/limit, run summaries, paginated findings and optional plan generation. There is no 'fix all', fuzzy matching, last-write-wins or automatic reconciliation repair. Configured exact matching is scoped to a tenant and ATS connection and uses title/department/location. Source and identity IDs are never globally compared.
+
+The repeatable demonstration in [CRM ATS synchronization](CRM_ATS_SYNCHRONIZATION.md) introduces one missing CRM requisition and one independent ATS location edit, verifies both actual finding categories and proves the operation count is unchanged by reconciliation and plan generation. Real external API reconciliation, continuous scans, richer provider schemas and long-lived repair orchestration are outside this phase.

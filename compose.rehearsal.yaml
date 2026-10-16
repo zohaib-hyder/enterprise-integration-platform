@@ -1,0 +1,5 @@
+# Local-only API ingress for signed webhook and readiness verification.
+services:
+  api:
+    networks: [application, database, edge]
+    ports: ['127.0.0.1:${REHEARSAL_API_PORT:-18000}:8000']

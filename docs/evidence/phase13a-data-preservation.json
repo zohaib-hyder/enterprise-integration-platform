@@ -1,0 +1,6 @@
+{
+  "tables_verified": 82,
+  "all_original_public_counts_and_fingerprints_unchanged": true,
+  "original_volume": "enterprise-integration-platform_postgres_data",
+  "method": "Read-only count and ordered-content fingerprint comparison with private Phase 12 backup manifest"
+}

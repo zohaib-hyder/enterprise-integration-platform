@@ -1,0 +1,50 @@
+{
+  "browser": {
+    "startTime": "2026-10-15T16:58:42.416Z",
+    "duration": 67907.146,
+    "expected": 28,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "axe_overview_violations": {
+    "desktop": 0,
+    "tablet": 0,
+    "mobile": 0
+  },
+  "frontend_unit_passed": 157,
+  "ai_mock_evaluation_passed": 60,
+  "ruff": "passed: check and format, 124 files",
+  "eslint": "passed",
+  "typescript": "passed",
+  "production_build": "passed",
+  "python_dependency_audit": "no known vulnerabilities",
+  "frontend_production_dependency_audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "frontend_development_audit": "5 high affected packages; underlying braces GHSA-vfj7-8cjw-p6xm remains open",
+  "migration_head": "e8e0abf289b1",
+  "migration_drift": "no new operations detected",
+  "original_public_fingerprints": "7/7 unchanged",
+  "sensitive_value_scan": {
+    "files": 84,
+    "matches": 0
+  },
+  "backend_complete_final": {
+    "passed": 634,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 1,
+    "duration_seconds": 1328.99,
+    "warning": "Starlette TestClient httpx deprecation; no failure"
+  },
+  "remote_ci": "not executed",
+  "deployment": "none",
+  "api_restart_same_session_and_records": "passed: auth/me 200 before/after; persisted connections present",
+  "ci_yaml": "parsed; three expected jobs"
+}

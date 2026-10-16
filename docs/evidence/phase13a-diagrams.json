@@ -1,0 +1,46 @@
+{
+  "engine": "Mermaid 12.2.0",
+  "scope": "Actual browser parse and SVG render of all source diagrams",
+  "diagrams": [
+    {
+      "file": "ai-human-review.mmd",
+      "parsed": true,
+      "rendered_svg_bytes": 39605
+    },
+    {
+      "file": "durable-worker.mmd",
+      "parsed": true,
+      "rendered_svg_bytes": 44525
+    },
+    {
+      "file": "incident-recovery.mmd",
+      "parsed": true,
+      "rendered_svg_bytes": 42740
+    },
+    {
+      "file": "multi-tenant-boundary.mmd",
+      "parsed": true,
+      "rendered_svg_bytes": 43842
+    },
+    {
+      "file": "notification-outbox.mmd",
+      "parsed": true,
+      "rendered_svg_bytes": 44021
+    },
+    {
+      "file": "retry-state-machine.mmd",
+      "parsed": true,
+      "rendered_svg_bytes": 40547
+    },
+    {
+      "file": "system.mmd",
+      "parsed": true,
+      "rendered_svg_bytes": 43928
+    },
+    {
+      "file": "webhook-to-ats.mmd",
+      "parsed": true,
+      "rendered_svg_bytes": 30093
+    }
+  ]
+}

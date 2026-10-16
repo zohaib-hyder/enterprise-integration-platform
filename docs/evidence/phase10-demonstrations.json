@@ -1,0 +1,166 @@
+{
+  "prefix": "phase10-6365f75f62",
+  "provider": "mock",
+  "results": [
+    {
+      "scenario": 1,
+      "title": "Persisted incident with authorized evidence citations",
+      "analysis_id": "7e3d2f59-da73-42d7-a9e9-b8516825f1d9",
+      "evidence_ids": [
+        "activity:35fe69e6-0970-4726-bfab-45b81e676ec9",
+        "activity:3a8ff6f4-55f1-40f4-904b-e43a09e4cf96",
+        "activity:409598da-c261-40ec-ad66-278a4d48552f",
+        "activity:4304fc2e-dd43-4f5a-a704-91e70eb4e9b5",
+        "activity:53fab576-2137-41ad-8955-d0248594d98e",
+        "activity:6331dcf2-ce1e-4336-85ad-a649e864e51f",
+        "activity:c0c8b49c-2463-4786-a7de-df1a53d2ca58",
+        "activity:e03ac65d-ca16-4e1f-95db-dd8a69885494",
+        "incident:55063761-b31d-44d4-ac6a-56b2501b57a3",
+        "plan:742a6ff7-f104-4847-980d-bf31da714d84",
+        "runbook:sync-conflict:v1"
+      ]
+    },
+    {
+      "scenario": 2,
+      "title": "Workflow failure and retained step/history citations",
+      "analysis_id": "784e4bbc-f7bc-4335-a49b-ccd97ab3dd5e",
+      "evidence_ids": [
+        "runbook:workflow-stuck:v1",
+        "step:701eedb4-5ee9-4ebb-a97a-8f3e0f3aa417",
+        "workflow:0fcbd2d5-e6c3-42a1-88ff-18f735c25aa0",
+        "workflow_history:23a40f17-f41c-424f-9a87-978ab3bb8fba",
+        "workflow_history:51d72254-4052-4256-aeba-8928316ffe24",
+        "workflow_history:7b9ffe0f-acaa-4f07-b715-a163aeeee495",
+        "workflow_history:8e22af50-2015-4ab0-965a-2ad91c80ad66",
+        "workflow_history:ec7d08cf-baaf-4bbd-bb33-e654ca610d87"
+      ]
+    },
+    {
+      "scenario": 3,
+      "title": "Connector outage with planner-derived recommendation",
+      "analysis_id": "e67f3447-80d5-446e-b1e0-31f71b2454af",
+      "evidence_ids": [
+        "audit:0b4d4ee7-c376-4af2-b688-8a10c01bcc91",
+        "audit:4a1a9485-e0b8-496f-9904-37f6bb6e4f4c",
+        "audit:534de28c-e0d3-475b-b57a-455cdb8069ae",
+        "audit:65c42d8c-b181-4e0e-88e7-6027bc343492",
+        "audit:6e36f6fa-92df-4abe-8e1e-389cc2acd9ad",
+        "audit:90f95869-a19e-4eb3-8c55-bd0c22b00705",
+        "audit:c6d44d04-973e-4151-a2ad-7b762182a7b1",
+        "audit:de832e7f-5c18-4428-927a-fdf8506c87d0",
+        "circuit:79cd3d36-2172-4c74-a663-34e1e5cc2a9a",
+        "connection:b4447e09-610b-4e97-8b9c-2667441b8df6",
+        "runbook:connector-unavailable:v1"
+      ]
+    },
+    {
+      "scenario": 4,
+      "title": "Sync conflict requires human review",
+      "analysis_id": "0f29cd9e-6b57-4e32-96ed-50dd69b5440b",
+      "evidence_ids": [
+        "conflict:6c366d2d-6157-4517-9d60-df5228909298",
+        "plan:b35e8a43-68d6-4ab5-b2ec-a91a588f00d9",
+        "runbook:sync-conflict:v1"
+      ]
+    },
+    {
+      "scenario": 5,
+      "title": "Actual synthetic 503 yields targeted scheduled retry suggestion",
+      "analysis_id": "d9a433fe-8bbc-4b46-be59-2213ac406ab1",
+      "evidence_ids": [
+        "audit:9f96f53e-5c41-4834-8359-55ec5b6ec8f4",
+        "audit:aca45c55-b101-4a8a-8a13-9d0e6b143ee0",
+        "delivery:912d8f54-f2d3-4083-ae8d-ae936494be04",
+        "delivery_attempt:a7240efe-e243-4924-b72e-c1680f1172db",
+        "runbook:notification-failed:v1"
+      ]
+    },
+    {
+      "scenario": 6,
+      "title": "Unknown delivery cannot be retried by AI",
+      "analysis_id": "35f219e0-cfe0-4902-a09d-af8af237dbff",
+      "evidence_ids": [
+        "audit:0ecd1cd5-de3d-4864-b216-9bf26a4788f1",
+        "audit:828d4ffa-c89b-42e7-845f-2256da38c5bb",
+        "audit:d2f82c66-c877-4181-8c17-82e0299f6f8f",
+        "audit:e310e25c-fc79-4003-8bfc-392704252b4a",
+        "delivery:5061d4d0-42c0-47d1-b889-d8ecf5a4109f",
+        "delivery_attempt:84641a76-2d46-470a-934f-af3afe331097",
+        "runbook:notification-failed:v1"
+      ]
+    },
+    {
+      "scenario": 7,
+      "title": "Expired credential metadata without secret material",
+      "analysis_id": "9e3dd868-a9b8-45b9-9338-96e07f9cb87f",
+      "evidence_ids": [
+        "audit:31200272-b3c1-4f66-8f80-9e776e15f558",
+        "audit:5d89a1ce-d546-4642-af91-99930a597459",
+        "audit:a52573af-36b1-444b-861d-566573206cfe",
+        "audit:d177d916-c2f5-44a4-a246-ade7a6c8c37b",
+        "audit:f90f1bc4-69f2-46d7-9d5e-cd3a0fc5f149",
+        "circuit:9f7e1a61-00c9-4925-a030-638b67c73ab9",
+        "connection:baaae34e-d5c6-42e0-b0d2-0157401f640e",
+        "credential-expiry:1cffce00-2f14-43c0-a2be-988174ea31db",
+        "credential-expiry:24200107-0136-422a-8445-61ace043178b",
+        "credential-expiry:25fd2843-9187-4088-b757-beeaa395d010",
+        "credential:1cffce00-2f14-43c0-a2be-988174ea31db",
+        "credential:24200107-0136-422a-8445-61ace043178b",
+        "credential:25fd2843-9187-4088-b757-beeaa395d010",
+        "credential:9cc573a7-6460-4a2a-96df-2ffd8c122eb3",
+        "runbook:connector-unavailable:v1"
+      ]
+    },
+    {
+      "scenario": 8,
+      "title": "Missing tenant operational evidence explicitly abstains",
+      "analysis_id": "b0218e05-5c10-4f50-9d93-0b30edc089c9",
+      "evidence_ids": []
+    },
+    {
+      "scenario": 9,
+      "title": "Malicious source text excluded; no unauthorized execution",
+      "analysis_id": "e3471b9e-6a9a-49d1-8b1c-1b377dd965bb",
+      "evidence_ids": [
+        "audit:7289667f-d84e-4d7b-9c29-168598bbeceb",
+        "audit:a93302ce-3e77-4d27-b9d0-eeb5cee3b60b",
+        "circuit:713ef418-71ce-4b7b-9251-3032ed9507d7",
+        "incident:a2ef0fb9-7f2b-4752-9f3b-ca357c755b15",
+        "runbook:connector-unavailable:v1"
+      ]
+    },
+    {
+      "scenario": 10,
+      "title": "Cross-tenant analysis and evidence access denied",
+      "analysis_id": null,
+      "evidence_ids": []
+    },
+    {
+      "scenario": 11,
+      "title": "Human acceptance opens preview only; no recovery request or execution",
+      "analysis_id": "784e4bbc-f7bc-4335-a49b-ccd97ab3dd5e",
+      "evidence_ids": [
+        "runbook:workflow-stuck:v1",
+        "step:701eedb4-5ee9-4ebb-a97a-8f3e0f3aa417",
+        "workflow:0fcbd2d5-e6c3-42a1-88ff-18f735c25aa0",
+        "workflow_history:23a40f17-f41c-424f-9a87-978ab3bb8fba",
+        "workflow_history:51d72254-4052-4256-aeba-8928316ffe24",
+        "workflow_history:7b9ffe0f-acaa-4f07-b715-a163aeeee495",
+        "workflow_history:8e22af50-2015-4ab0-965a-2ad91c80ad66",
+        "workflow_history:ec7d08cf-baaf-4bbd-bb33-e654ca610d87"
+      ]
+    },
+    {
+      "scenario": 12,
+      "title": "Changed evidence blocks stale recommendation handoff",
+      "analysis_id": "e3471b9e-6a9a-49d1-8b1c-1b377dd965bb",
+      "evidence_ids": [
+        "audit:7289667f-d84e-4d7b-9c29-168598bbeceb",
+        "audit:a93302ce-3e77-4d27-b9d0-eeb5cee3b60b",
+        "circuit:713ef418-71ce-4b7b-9251-3032ed9507d7",
+        "incident:a2ef0fb9-7f2b-4752-9f3b-ca357c755b15",
+        "runbook:connector-unavailable:v1"
+      ]
+    }
+  ]
+}

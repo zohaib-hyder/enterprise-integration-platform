@@ -1,0 +1,20 @@
+{
+  "prefix": "release-7a962483",
+  "scope": "Isolated Compose test-mode HTTP rehearsal; synthetic connectors and mock AI only",
+  "passed": 13,
+  "checks": [
+    "tenant_login",
+    "synthetic_connector_configuration",
+    "signed_webhook_ingestion",
+    "injected_email_partial_failure",
+    "authorized_targeted_recovery",
+    "slack_and_email_delivery",
+    "canonical_transformation",
+    "crm_to_ats_sync",
+    "durable_workflow_execution",
+    "webhook_replay_idempotency",
+    "operations_dashboard",
+    "authorized_mock_ai_evidence",
+    "human_review_preview_without_execution"
+  ]
+}

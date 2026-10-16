@@ -1,0 +1,11 @@
+flowchart LR
+  User[Authorized operator request] --> Evidence[Bounded typed evidence snapshot]
+  Evidence --> Mock[Deterministic mock by default]
+  Mock --> Validate[Strict schema / citation / grounding validation]
+  Validate --> Store[Persist analysis / evidence / recommendations]
+  Store --> Reviewer[Human inspects authorized citations]
+  Reviewer --> Decision[Accept / reject / request changes with version check]
+  Decision --> Preview[Accept yields existing recovery PREVIEW only]
+  Preview --> Governance[Separate request / approval / explicit confirmation]
+  Governance --> Existing[Existing deterministic recovery service]
+  Store --> Prohibit[AI has no execution tool or autonomous write path]

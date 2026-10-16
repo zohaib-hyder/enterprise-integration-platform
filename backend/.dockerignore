@@ -1,0 +1,25 @@
+**
+!app/
+!app/**
+!alembic/
+!alembic/**
+!alembic.ini
+!requirements.lock
+!Dockerfile
+!container_health.py
+**/__pycache__/
+**/*.pyc
+
+# Deny sensitive files even if placed inside an otherwise allowed source tree.
+**/.env
+**/.env.*
+**/*.env
+**/*.key
+**/*.pem
+**/*.p12
+**/*.pfx
+**/*.dump
+**/*.pgdump
+**/*.har
+**/*.trace
+**/credentials*.json

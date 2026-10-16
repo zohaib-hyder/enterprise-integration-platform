@@ -1,0 +1,12 @@
+{
+  "passed": 6,
+  "checks": [
+    "graceful_worker_stop_not_active",
+    "own_worker_probe_not_masked_by_other_healthy_worker",
+    "idle_worker_sigkill_restart_and_stale_detection",
+    "same_session_after_api_frontend_restart",
+    "durable_records_and_no_duplicate_deliveries",
+    "isolated_database_outage_readiness_503_and_pool_recovery"
+  ],
+  "scope": "Isolated idle-worker SIGKILL and graceful service restarts; no after-effect crash cut claimed"
+}

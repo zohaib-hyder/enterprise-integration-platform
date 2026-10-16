@@ -1,0 +1,179 @@
+{
+  "environment": {
+    "platform": "macOS-26.3.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.12.14",
+    "hardware": "User-reported MacBook Air M1 / 8GB RAM",
+    "database": "PostgreSQL 17 local Docker, existing limits 1 CPU/256MB",
+    "resource_observation": "Full backend regressions may run concurrently; no process RSS/CPU sampler. No claim of production capacity."
+  },
+  "schema": "phase11_dabd270bca0c",
+  "results": [
+    {
+      "name": "health",
+      "samples": 30,
+      "concurrency": 2,
+      "duration_seconds": 0.3202,
+      "p50_ms": 20.791,
+      "p95_ms": 32.861,
+      "p99_ms": null,
+      "errors": 0,
+      "completed_units": 30,
+      "throughput_per_second": 93.69,
+      "p99_reason": "Sample below 100; p99 intentionally omitted."
+    },
+    {
+      "name": "authenticated_connections_bff",
+      "samples": 20,
+      "concurrency": 2,
+      "duration_seconds": 0.502,
+      "p50_ms": 38.304,
+      "p95_ms": 86.628,
+      "p99_ms": null,
+      "errors": 0,
+      "completed_units": 20,
+      "throughput_per_second": 39.838,
+      "p99_reason": "Sample below 100; p99 intentionally omitted."
+    },
+    {
+      "name": "operations_overview_bff",
+      "samples": 20,
+      "concurrency": 2,
+      "duration_seconds": 0.8633,
+      "p50_ms": 78.965,
+      "p95_ms": 126.135,
+      "p99_ms": null,
+      "errors": 0,
+      "completed_units": 20,
+      "throughput_per_second": 23.166,
+      "p99_reason": "Sample below 100; p99 intentionally omitted."
+    },
+    {
+      "name": "incident_listing_bff",
+      "samples": 20,
+      "concurrency": 2,
+      "duration_seconds": 0.3574,
+      "p50_ms": 30.826,
+      "p95_ms": 46.156,
+      "p99_ms": null,
+      "errors": 0,
+      "completed_units": 20,
+      "throughput_per_second": 55.962,
+      "p99_reason": "Sample below 100; p99 intentionally omitted."
+    },
+    {
+      "name": "mock_ai_analysis_bff",
+      "samples": 5,
+      "concurrency": 1,
+      "duration_seconds": 1.0427,
+      "p50_ms": 200.692,
+      "p95_ms": 244.544,
+      "p99_ms": null,
+      "errors": 0,
+      "completed_units": 5,
+      "throughput_per_second": 4.795,
+      "p99_reason": "Sample below 100; p99 intentionally omitted."
+    },
+    {
+      "name": "sync_plan_and_existing_route_apply",
+      "samples": 5,
+      "concurrency": 2,
+      "duration_seconds": 0.8746,
+      "p50_ms": 140.045,
+      "p95_ms": 611.87,
+      "p99_ms": null,
+      "errors": 0,
+      "completed_units": 5,
+      "throughput_per_second": 5.717,
+      "p99_reason": "Sample below 100; p99 intentionally omitted."
+    },
+    {
+      "name": "notification_queue_processing",
+      "samples": 8,
+      "concurrency": 1,
+      "duration_seconds": 1.3355,
+      "p50_ms": 155.379,
+      "p95_ms": 273.938,
+      "p99_ms": null,
+      "errors": 0,
+      "completed_units": 8,
+      "throughput_per_second": 5.99,
+      "p99_reason": "Sample below 100; p99 intentionally omitted."
+    },
+    {
+      "name": "event_dispatch",
+      "samples": 5,
+      "concurrency": 1,
+      "duration_seconds": 0.0198,
+      "p50_ms": 2.464,
+      "p95_ms": 7.124,
+      "p99_ms": null,
+      "errors": 0,
+      "completed_units": 0,
+      "throughput_per_second": 0.0,
+      "p99_reason": "Sample below 100; p99 intentionally omitted."
+    },
+    {
+      "name": "workflow_claim_execute",
+      "samples": 10,
+      "concurrency": 2,
+      "duration_seconds": 0.2192,
+      "p50_ms": 7.767,
+      "p95_ms": 218.985,
+      "p99_ms": null,
+      "errors": 0,
+      "completed_units": 1,
+      "throughput_per_second": 4.562,
+      "p99_reason": "Sample below 100; p99 intentionally omitted."
+    },
+    {
+      "name": "signed_webhook_ingestion",
+      "samples": 20,
+      "concurrency": 2,
+      "duration_seconds": 0.6005,
+      "p50_ms": 35.63,
+      "p95_ms": 151.817,
+      "p99_ms": null,
+      "errors": 0,
+      "completed_units": 20,
+      "throughput_per_second": 33.304,
+      "p99_reason": "Sample below 100; p99 intentionally omitted."
+    }
+  ],
+  "operations_overview_query_count": 22,
+  "incident_explain": [
+    {
+      "Plan": {
+        "Node Type": "Limit",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Startup Cost": 0.14,
+        "Total Cost": 8.16,
+        "Plan Rows": 1,
+        "Plan Width": 24,
+        "Plans": [
+          {
+            "Node Type": "Index Only Scan",
+            "Parent Relationship": "Outer",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Scan Direction": "Backward",
+            "Index Name": "ix_operation_incidents_tenant_created",
+            "Relation Name": "operation_incidents",
+            "Alias": "operation_incidents",
+            "Startup Cost": 0.14,
+            "Total Cost": 8.16,
+            "Plan Rows": 1,
+            "Plan Width": 24,
+            "Index Cond": "(tenant_id = '2f0ff6a4-1b6b-4c40-8b24-cf02f72b45e7'::uuid)"
+          }
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "End-to-end BFF includes CSRF/session serialization and local HTTP client overhead.",
+    "No p99 or SLA claim with these sample sizes.",
+    "Workflow measurements include empty polls after backlog drains; inspect semantics before extrapolating."
+  ]
+}

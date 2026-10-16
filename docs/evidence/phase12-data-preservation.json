@@ -1,0 +1,7 @@
+{
+  "tables_verified": 82,
+  "all_counts_and_fingerprints_unchanged": true,
+  "scope": "all original public application tables",
+  "original_volume": "enterprise-integration-platform_postgres_data",
+  "backup_manifest_private": true
+}

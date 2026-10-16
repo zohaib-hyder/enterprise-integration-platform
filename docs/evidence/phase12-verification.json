@@ -1,0 +1,118 @@
+{
+  "recorded_at_utc": "2026-10-15T18:44:58.070230+00:00",
+  "backend": {
+    "passed": 653,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 1,
+    "duration_seconds": 2061.8
+  },
+  "frontend_unit_passed": 157,
+  "browser": {
+    "startTime": "2026-10-15T18:30:21.839Z",
+    "duration": 117168.38699999999,
+    "expected": 28,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "axe_overview_violations": {
+    "desktop": 0,
+    "tablet": 0,
+    "mobile": 0
+  },
+  "mock_ai": {
+    "passed": 60,
+    "total": 60
+  },
+  "ruff": "check and format passed, 131 files",
+  "eslint": "passed",
+  "typescript": "passed",
+  "host_production_build": "passed",
+  "container_builds": "final API/worker and frontend passed",
+  "fresh_backend_lock_install": "passed: 37 packages compatible and app import",
+  "fresh_configuration": "independent keys/persistent CSRF/mode 600/overwrite refusal passed",
+  "npm_ci": "passed",
+  "python_audit": "no known vulnerabilities",
+  "npm_production_audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "npm_full_audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 5,
+    "critical": 0,
+    "total": 5
+  },
+  "migration": {
+    "head": "e8e0abf289b1",
+    "files": 13,
+    "single_head": true,
+    "drift": false,
+    "clean_upgrade": "passed"
+  },
+  "ci_yaml": "parsed, three jobs",
+  "remote_ci": "NOT_VERIFIED: not authorized/executed",
+  "release_services": "stopped; all volumes retained",
+  "original_postgres": "running healthy, original volume preserved",
+  "publication_commit_push_deployment": "none",
+  "production_release": "BLOCKED by disclosed upstream dependency/image findings and deployment gates",
+  "backup_restore": {
+    "database": "phase12_restore_99831a4455e9",
+    "tables_verified": 82,
+    "counts_and_fingerprints_match": true,
+    "dump_sha256_match": true,
+    "retained": true,
+    "application_orm_read": "passed"
+  },
+  "data_preservation": {
+    "tables_verified": 82,
+    "all_counts_and_fingerprints_unchanged": true,
+    "scope": "all original public application tables",
+    "original_volume": "enterprise-integration-platform_postgres_data",
+    "backup_manifest_private": true
+  },
+  "release_demo": {
+    "prefix": "release-d536e024",
+    "scope": "Isolated Compose test-mode HTTP rehearsal; synthetic connectors and mock AI only",
+    "passed": 13,
+    "checks": [
+      "tenant_login",
+      "synthetic_connector_configuration",
+      "signed_webhook_ingestion",
+      "injected_email_partial_failure",
+      "authorized_targeted_recovery",
+      "slack_and_email_delivery",
+      "canonical_transformation",
+      "crm_to_ats_sync",
+      "durable_workflow_execution",
+      "webhook_replay_idempotency",
+      "operations_dashboard",
+      "authorized_mock_ai_evidence",
+      "human_review_preview_without_execution"
+    ]
+  },
+  "restart": {
+    "passed": 6,
+    "checks": [
+      "graceful_worker_stop_not_active",
+      "own_worker_probe_not_masked_by_other_healthy_worker",
+      "idle_worker_sigkill_restart_and_stale_detection",
+      "same_session_after_api_frontend_restart",
+      "durable_records_and_no_duplicate_deliveries",
+      "isolated_database_outage_readiness_503_and_pool_recovery"
+    ],
+    "scope": "Isolated idle-worker SIGKILL and graceful service restarts; no after-effect crash cut claimed"
+  },
+  "redaction": {
+    "files_scanned": 86,
+    "configured_sensitive_value_matches": 0,
+    "scope": "actual configured/rehearsal/fixture secret values in Phase 12 logs and emitted public JavaScript; excludes intentionally private env/session/backup files"
+  }
+}

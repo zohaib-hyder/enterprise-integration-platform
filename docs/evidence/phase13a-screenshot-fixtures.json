@@ -1,0 +1,11 @@
+{
+  "scope": "Synthetic local portfolio evidence; no direct database state injection",
+  "tenant_id": "6e10a8d9-24a4-4bef-84f7-69899c3f5059",
+  "conflict_id": "97671bd7-fb06-43a0-afe8-624719e66db6",
+  "incident_id": "831c3318-8fd7-4839-b4d6-305a88b23fad",
+  "correlation_id": "54e9a40c-f169-4241-9cd6-9b2927ba52b2",
+  "analysis_id": "d7121469-6e33-48c8-aa26-f4cf3f03bd49",
+  "mock_ai": true,
+  "conflict_left_open": true,
+  "review_left_pending": true
+}

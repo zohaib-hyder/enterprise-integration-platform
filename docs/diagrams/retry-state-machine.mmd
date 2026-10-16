@@ -1,0 +1,20 @@
+stateDiagram-v2
+  [*] --> PENDING
+  PENDING --> RUNNING: fenced claim
+  RUNNING --> PENDING: next checkpoint
+  RUNNING --> WAITING: durable delay
+  WAITING --> RUNNING: due
+  RUNNING --> RETRY_SCHEDULED: classified retryable failure
+  RETRY_SCHEDULED --> RUNNING: persisted due time and budget
+  RUNNING --> SUCCEEDED
+  RUNNING --> FAILED: terminal failure
+  RUNNING --> DEAD_LETTERED: exhausted / unrecoverable
+  PENDING --> CANCELLED: authorized cancellation
+  WAITING --> CANCELLED
+  RETRY_SCHEDULED --> CANCELLED
+  RUNNING --> CANCELLED: cooperative cancellation
+  RUNNING --> PENDING: expired lease with new fence
+  note right of DEAD_LETTERED
+    Authorized replay creates a NEW execution.
+    Terminal records are not reset.
+  end note

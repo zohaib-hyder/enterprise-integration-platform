@@ -1,0 +1,123 @@
+{
+  "recorded_at_utc": "2026-10-16T11:57:38.278Z",
+  "scope": "Unaltered real local UI; synthetic fixtures; mock AI; lossless PNG compression; no browser chrome or persisted session state",
+  "screenshots": [
+    {
+      "file": "01-dashboard.png",
+      "route": "/",
+      "caption": "Overview with real API health and clearly labeled local simulator capabilities.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 165235,
+      "sha256": "f035f827970967b6f00749f0c6e69d6ebd300270de01a33e4249f797fa836725"
+    },
+    {
+      "file": "02-connections.png",
+      "route": "/connections",
+      "caption": "Configured CRM simulator and a real local health check.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 163816,
+      "sha256": "a5dab739743ad27a8c893e6623458ceef38c11a899d0058313648d8488252456"
+    },
+    {
+      "file": "03-events.png",
+      "route": "/events",
+      "caption": "Accepted signed synthetic event and durable ingestion provenance.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 172067,
+      "sha256": "7dcf57f15708ad87d5a7e9613c4018586a917f51caa8f8954b5a680d7c8c024b"
+    },
+    {
+      "file": "04-workflows.png",
+      "route": "/workflows",
+      "caption": "Persisted versioned workflows; no invented provider integration.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 150130,
+      "sha256": "be18e2931a58945de3e85b141f373e12b93215024cf6698225445db93cc36b42"
+    },
+    {
+      "file": "05-executions.png",
+      "route": "/executions",
+      "caption": "Actual successful synthetic workflow with checkpoint history.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 157751,
+      "sha256": "0e0f5c8ab808e932d2f64cfbfdaa1f14672ef3584eba05135dd31a5c460afa96"
+    },
+    {
+      "file": "06-synchronization.png",
+      "route": "/synchronization",
+      "caption": "Committed sync decision and genuine held update from an independent ATS edit.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 128979,
+      "sha256": "dab6169b23396c68f2e12e4689e73908f8463c1ba5e2a5b015304f047f4c161b"
+    },
+    {
+      "file": "07-conflict-review.png",
+      "route": "/synchronization",
+      "caption": "Open destination-change conflict with before/after authority evidence; unresolved.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 204692,
+      "sha256": "acb7529abe7ac4fca43459fd5d3d5c3f35b6159657b88c816c38d11df1989a87"
+    },
+    {
+      "file": "08-notifications.png",
+      "route": "/notifications",
+      "caption": "Separate synthetic Slack/email delivery receipts after targeted retry.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 110246,
+      "sha256": "af677d0721e72ef110868e13b4cb0ecf29b9f04b92c6f60e066d1f4b1b17d470"
+    },
+    {
+      "file": "09-calendar.png",
+      "route": "/calendar",
+      "caption": "Synthetic calendar coordination; no real invitation sent.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 150364,
+      "sha256": "adc1767bf522ffede03569a01c34fc681ecd8686cd33869637963923da999b60"
+    },
+    {
+      "file": "10-operations.png",
+      "route": "/operations",
+      "caption": "Observed tenant evidence and failure history from local fixtures.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 169342,
+      "sha256": "1b8536487c02b89ec12d1d72ae01f1fdcf0a656dd9605bb0590c3d0151645f12"
+    },
+    {
+      "file": "11-incident-timeline.png",
+      "route": "/operations",
+      "caption": "Real correlated incident/workflow timeline with persisted provenance.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 169886,
+      "sha256": "61202ec61b2c5400fe533805fa5cc604202c2a803a79cea4005bbd1a6c5f3589"
+    },
+    {
+      "file": "12-ai-insights.png",
+      "route": "/ai-insights",
+      "caption": "SIMULATED deterministic mock analysis with authorized citations.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 216433,
+      "sha256": "4356d95ed61c784ebbcff9e50ae650971c5c23e14dcd94fcbe0f1368695a71dd"
+    },
+    {
+      "file": "13-human-review.png",
+      "route": "/ai-review",
+      "caption": "Human review controls; accepting creates a preview only, not execution.",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 193256,
+      "sha256": "8bb4d49d33eeca426e158b70a993d37ccd96a397d1d1453ec0aea8d6e7d4bf71"
+    }
+  ]
+}

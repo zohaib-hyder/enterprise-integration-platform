@@ -1,0 +1,59 @@
+{
+  "recorded_at_utc": "2026-10-16T11:59:56.889092+00:00",
+  "scope": "Current tracked and all untracked non-ignored candidates, including examples; no Git history exists at HEAD",
+  "tracked_files": 0,
+  "untracked_candidate_files": 366,
+  "candidate_files": 366,
+  "candidate_bytes": 4996939,
+  "ignored_file_classes": {
+    "private env": 3,
+    "private fixtures/backups/raw evidence": 2601,
+    "dependencies/caches": 48759,
+    "generated/local artifacts": 226
+  },
+  "private_env_files_compared": 7,
+  "private_fixture_files_compared": 2,
+  "configured_private_values_compared": 16,
+  "findings": {
+    "configured_secret_matches": [],
+    "personal_path_matches": [],
+    "sensitive_filename_matches": [],
+    "private_key_markers": [],
+    "large_candidates": []
+  },
+  "largest_candidates": [
+    {
+      "file": "frontend/package-lock.json",
+      "bytes": 296947
+    },
+    {
+      "file": "docs/assets/screenshots/12-ai-insights.png",
+      "bytes": 216433
+    },
+    {
+      "file": "docs/assets/screenshots/07-conflict-review.png",
+      "bytes": 204692
+    },
+    {
+      "file": "docs/assets/screenshots/13-human-review.png",
+      "bytes": 193256
+    },
+    {
+      "file": "docs/assets/screenshots/03-events.png",
+      "bytes": 172067
+    },
+    {
+      "file": "docs/assets/screenshots/11-incident-timeline.png",
+      "bytes": 169886
+    },
+    {
+      "file": "docs/assets/screenshots/10-operations.png",
+      "bytes": 169342
+    },
+    {
+      "file": "docs/assets/screenshots/01-dashboard.png",
+      "bytes": 165235
+    }
+  ],
+  "limits": "Secret patterns and configured-value comparison cannot certify absence of all unknown secrets or pixel content; separate detector and visual review required. No staging, commit, remote or publication performed."
+}

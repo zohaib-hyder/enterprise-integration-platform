@@ -1,0 +1,5 @@
+{
+  "files_scanned": 86,
+  "configured_sensitive_value_matches": 0,
+  "scope": "actual configured/rehearsal/fixture secret values in Phase 12 logs and emitted public JavaScript; excludes intentionally private env/session/backup files"
+}
