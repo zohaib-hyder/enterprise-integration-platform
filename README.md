@@ -2,7 +2,7 @@
 
 A working enterprise integration and AI workflow portfolio for a **fictional North American staffing company**. Sales requisitions move from CRM to ATS through signed events, versioned mappings and durable workflows. Disconnected systems force manual copying, hide partial failures and risk overwriting recruiter edits. Operators use this platform to inspect conflicts, recover individual failed actions and review evidence-grounded AI guidance.
 
-**All demonstrated CRM, ATS, Slack, email and calendar effects are synthetic. AI uses a deterministic mock.** No customer deployment, real provider/OAuth verification, remote CI success or exactly-once remote delivery is claimed. Production release is blocked by disclosed dependency/image findings. [Read the public disclosures](docs/PUBLIC_RELEASE_DISCLOSURES.md).
+**All demonstrated CRM, ATS, Slack, email and calendar effects are synthetic. AI uses a deterministic mock.** No customer deployment, real provider/OAuth verification or exactly-once remote delivery is claimed. Actual hosted CI results are linked below. Production release is blocked by disclosed dependency/image findings. [Read the public disclosures](docs/PUBLIC_RELEASE_DISCLOSURES.md).
 
 ![Synthetic local operator dashboard](docs/assets/screenshots/01-dashboard.png)
 
@@ -107,9 +107,11 @@ Recorded local Phase 12 results (2026-10-15 UTC), linked to [machine-readable ev
 | Ruff / ESLint / TypeScript / production builds | Passed locally |
 | Container HTTP demo / restart-outage rehearsal | 13 / 6 checks passed |
 | Backup / restore | 82 public tables matched counts/fingerprints; isolated restore |
-| Remote GitHub Actions | Configuration only; not executed or verified |
+| Remote GitHub Actions | Not run in Phase 12; new Phase 13B hosted results below |
 
-Phase 13A preparation checks are dated separately in [its report](docs/PHASE_13A_REPORT.md). Application business source was unchanged, so the long full backend suite was not repeated. Browser accessibility evidence covers Overview at three viewports; it is not an application-wide certification. Bounded laptop measurements are [diagnostic baselines](docs/PERFORMANCE_BASELINES.md), not production throughput or an SLA.
+**New hosted verification, 2026-10-16:** [Platform verification passed](https://github.com/zohaib-hyder/enterprise-integration-platform/actions/runs/38903952434) on code revision `d8347254da867f2cde89fc915dd010758884d2e0`: 653 backend tests, 157 frontend tests, 28 browser tests and 60/60 mock cases; Ruff, migrations/drift, ESLint, TypeScript and builds passed. Python/production npm audits reported zero known findings; the development audit still reports five high findings. [Publication report and CI fixes](docs/PHASE_13B_REPORT.md). The final documentation-only report commit skips duplicate CI and changes no tested application/workflow source.
+
+Phase 13A preparation checks are dated separately in [its report](docs/PHASE_13A_REPORT.md). During Phase 13A, application business source was unchanged, so the long backend suite was not repeated then; the hosted Phase 13B execution above is separate. Browser accessibility evidence covers Overview at three viewports; it is not an application-wide certification. Bounded laptop measurements are [diagnostic baselines](docs/PERFORMANCE_BASELINES.md), not production throughput or an SLA.
 
 To verify relevant changes locally:
 

@@ -1,6 +1,6 @@
 # Implementation phases
 
-Each phase should deliver working code, explicit contracts and verification before expanding scope. Phases 0–10 are implemented. Phase 11 hardening and local verification are complete with results recorded in PHASE_11_REPORT.md; Phase 12 release preparation is implemented with local evidence and explicit unresolved release gates. Phase 13A local publication preparation is documented; actual Phase 13 publication remains separate. The requested Phase 3 webhook scope supersedes the earlier connection-onboarding plan; real provider onboarding remains deferred.
+Each phase should deliver working code, explicit contracts and verification before expanding scope. Phases 0–10 are implemented. Phase 11 hardening and local verification are complete with results recorded in PHASE_11_REPORT.md; Phase 12 release preparation is implemented with local evidence and explicit unresolved release gates. Phase 13A local publication preparation is documented; Phase 13B authorized public MIT source publication, with successfully inspected hosted CI results in PHASE_13B_REPORT.md. The requested Phase 3 webhook scope supersedes the earlier connection-onboarding plan; real provider onboarding remains deferred.
 
 | Phase | Scope | Exit evidence |
 | --- | --- | --- |
@@ -17,7 +17,7 @@ Each phase should deliver working code, explicit contracts and verification befo
 | 10 | Evidence-grounded AI assistance, strict decisions, human review, evaluation and AI observability — complete | Mock-only contract evaluations, real persisted citations, no autonomous execution, existing approval preservation |
 | 11 | Security hardening, browser E2E, baselines, reliability and CI configuration | Findings register, PostgreSQL regressions, browser/axe evidence and bounded local measurements; see Phase 11 report |
 | 12 | Release preparation, dependency/container review, reproducible environments, backup/restore and local CI/rehearsal | Actual local verification and release-readiness register; unresolved upstream findings remain explicit |
-| 13 | Portfolio case study and local publication preparation (13A); actual publication pending | README, diagrams, real screenshots and review checklist; separate approval required for Git/remote/publication |
+| 13 | Portfolio preparation (13A) and authorized public MIT publication (13B) | Public source, real GitHub rendering and inspected hosted Actions; see PHASE_13B_REPORT.md. Deployment/social posts remain separate. |
 
 Real provider integration and OAuth are optional future extensions, requiring separate authorization and credentials. Paid APIs are not required. Deployment remains a manual future decision.
 

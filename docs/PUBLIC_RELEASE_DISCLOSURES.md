@@ -1,6 +1,6 @@
 # Public release disclosures
 
-Prepared 2026-10-16 for local portfolio review. **No repository publication, remote CI run, production deployment or production certification has occurred.** The project is a fictional staffing-company implementation; screenshots and demonstrations use synthetic organizations, records and reserved `example.test` recipients.
+Updated 2026-10-16. The source is publicly published under MIT at [zohaib-hyder/enterprise-integration-platform](https://github.com/zohaib-hyder/enterprise-integration-platform). Actual remote Actions results are recorded in the [Phase 13B report](PHASE_13B_REPORT.md). **No production deployment or production security certification has occurred.** The project is a fictional staffing-company implementation; screenshots and demonstrations use synthetic organizations, records and reserved `example.test` recipients.
 
 ## Implemented and simulated boundaries
 
@@ -17,6 +17,8 @@ Tenant isolation uses verified membership, route permissions, scoped service pre
 ## Verification scope and unresolved findings
 
 The [Phase 12 record](evidence/phase12-verification.json), recorded 2026-10-15 UTC, reports 653 backend tests, 157 frontend tests, 28 browser tests and 60 mock evaluation cases passing, plus build/lint/type checks. Those are local results, not a remote CI badge. Phase 13A does not rerun the approximately 34-minute backend suite because application business source is unchanged. Its separately dated preparation evidence records what was actually rerun. One TestClient deprecation warning remains. Overview axe checks cover three viewport sizes; they do not certify the whole application accessible.
+
+Phase 13B additionally verified [hosted run 38903952434](https://github.com/zohaib-hyder/enterprise-integration-platform/actions/runs/38903952434) on code revision `d8347254da867f2cde89fc915dd010758884d2e0`: all three jobs succeeded, with 653 backend / 157 frontend / 28 browser tests and 60 mock cases. Earlier real CI failures and fixture/configuration corrections are retained in the publication report. The documentation-only evidence commit skips duplicate CI; it does not change the verified application, tests or workflow. Hosted success is not a production certification.
 
 Dependency/image results are dated snapshots, not current guarantees. Phase 12 Python and production npm audits reported zero known findings. The complete npm tree reported **five high development-tooling findings** through the ESLint/fast-glob/micromatch/braces chain. No unsafe override, forced downgrade or suppression was used. Docker Scout 1.24.0 reported:
 

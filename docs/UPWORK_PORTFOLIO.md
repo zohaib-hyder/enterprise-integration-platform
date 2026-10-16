@@ -14,6 +14,6 @@
 
 **Skills / categories:** Python, FastAPI, PostgreSQL, TypeScript, Next.js; API integration, workflow automation, full-stack development, data integration, reliability engineering.
 
-**Suggested media:** Dashboard → webhook-to-ATS diagram → synchronization/conflict review → notification delivery → incident timeline → human review. Use the [actual screenshot gallery](assets/screenshots/README.md) and [architecture diagrams](ARCHITECTURE_DIAGRAMS.md). Add the actual approved repository link after publication; none has been created for this task.
+**Suggested media:** Dashboard → webhook-to-ATS diagram → synchronization/conflict review → notification delivery → incident timeline → human review. Use the [actual screenshot gallery](assets/screenshots/README.md) and [architecture diagrams](ARCHITECTURE_DIAGRAMS.md). Approved source link: [public GitHub repository](https://github.com/zohaib-hyder/enterprise-integration-platform). This draft has not been posted to Upwork.
 
 **Disclosure:** Independent synthetic portfolio project; no client testimonial, real customer data or claimed ROI. CRM/ATS/Slack/email/calendar and AI are simulated in the demo. External OAuth/delivery, production scale and remote CI are unverified. Upstream security findings block production release. No autonomous AI remediation or exactly-once remote-delivery guarantee. See [full disclosures](PUBLIC_RELEASE_DISCLOSURES.md). Publishing this copy needs separate approval.
